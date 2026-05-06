@@ -1,0 +1,21 @@
+# DESIGN, LAYOUT AND SETUP
+
+/DesktopPet
+ ├── App.xaml
+ ├── MainWindow.xaml        # Transparent always-on-top window
+ ├── Core/
+ │    ├── Pet.cs            # Main controller (ties everything together)
+ │    ├── PetState.cs       # Enum for behavior states
+ │
+ ├── Systems/
+ │    ├── AnimationSystem.cs
+ │    ├── MovementSystem.cs
+ │    ├── BehaviorSystem.cs
+ │
+ ├── Models/
+ │    ├── SpriteAnimation.cs
+ │
+ └── Assets/
+      ├── walk_1.png
+      ├── walk_2.png
+      └── idle.png
