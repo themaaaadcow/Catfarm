@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\audio\sillycatgotthemMOVES.wav" />
     <None Remove="Assets\idle_1.png" />
     <None Remove="Assets\idle_2.png" />
     <None Remove="Assets\idle_3.png" />
@@ -19,6 +20,12 @@
     <None Remove="Assets\walkRight_2.png" />
     <None Remove="Assets\walkRight_3.png" />
     <None Remove="Assets\walkRight_4.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\audio\sillycatgotthemMOVES.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
