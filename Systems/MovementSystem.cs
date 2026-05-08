@@ -7,15 +7,16 @@ public class MovementSystem
     private double _x = 100;
     private double _y;
     private double _vx = 10;
+    private double _vy = 3;
+    private double gforce = 1.2;
+    private double ground;
 
     public MovementSystem(Window window)
     {
         _window = window;
-
-        double screenBottom = SystemParameters.WorkArea.Bottom;
         double petHeight = 96; // NOT THE ACTUAL WINDOW HEIGHT, ADJUSTED TO LOOK BETTER ON SCREEN
-
-        _y = screenBottom - petHeight;
+        ground = SystemParameters.WorkArea.Bottom - petHeight;
+        _y = 0;
     }
 
     public PetState Update(PetState state)
@@ -47,6 +48,14 @@ public class MovementSystem
 
         _window.Left = _x;
         _window.Top = _y;
+        _vy += gforce;
+        _y += _vy;
+
+        if (_y > ground)
+        {
+            _y = ground;
+            _vy = 0;
+        }
 
         return state;
     }
