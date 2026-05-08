@@ -54,7 +54,7 @@ public class MovementSystem
         if (_y > ground)
         {
             _y = ground;
-            _vy = 0;
+            _vy *= -0.2;
         }
 
         return state;
