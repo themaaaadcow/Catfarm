@@ -13,6 +13,7 @@ public class Pet
     private readonly BehaviorSystem _behavior;
 
     private readonly DispatcherTimer _timer;
+    public MovementSystem Movement => _movement;
 
     public Pet(Image image, Window window)
     {
