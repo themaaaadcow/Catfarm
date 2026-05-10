@@ -27,7 +27,8 @@ public class MovementSystem
         _window = window;
         double petHeight = 96; // NOT THE ACTUAL WINDOW HEIGHT, ADJUSTED TO LOOK BETTER ON SCREEN
         ground = SystemParameters.WorkArea.Bottom - petHeight;
-        _y = 0;
+        _x = 500;
+        _y = ground;
         audio.InitializeSound("Assets/audio/sillycatgotthemMOVES.wav");
     }
     private PetState _previousState;
@@ -71,7 +72,7 @@ public class MovementSystem
         if (_y > ground)
         {
             _y = ground;
-            _vy *= -0.2;
+            _vy *= -0.6;
 
             if (Math.Abs(_vy) < 1)
             {
